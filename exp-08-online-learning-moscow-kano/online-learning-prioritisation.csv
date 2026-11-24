@@ -1,0 +1,7 @@
+ID,Requirement / feature,MoSCoW,Kano category,Rationale,Suggested Jira priority,Jira labels
+O1,Course enrollment and registration,Must have,Basic (must-be),No learning without enrolling; learners expect it,Highest,"moscow-must, kano-basic"
+O2,Video lecture streaming,Must have,Basic (must-be),Primary content delivery channel,Highest,"moscow-must, kano-basic"
+O3,Interactive quizzes and assignments,Should have,Performance (one-dimensional),Better assessment → better learning outcomes,High,"moscow-should, kano-performance"
+O4,Progress tracking dashboard,Should have,Performance (one-dimensional),Motivation and self-monitoring improve with richer tracking,High,"moscow-should, kano-performance"
+O5,Peer-to-peer discussion forums,Could have,Excitement (attractive),Community engagement delights learners but is not required,Medium,"moscow-could, kano-excitement"
+O6,Certificate generation,Could have,Excitement (attractive),Rewarding for completers; can ship after assessments exist,Medium,"moscow-could, kano-excitement"

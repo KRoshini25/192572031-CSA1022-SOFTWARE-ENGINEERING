@@ -1,0 +1,7 @@
+Summary,Issue Type,Priority,Labels,Description
+"Course enrollment and registration",Story,Highest,"moscow-must kano-basic","MoSCoW: Must have; Kano: Basic (must-be). No learning without enrolling; learners expect it"
+"Video lecture streaming",Story,Highest,"moscow-must kano-basic","MoSCoW: Must have; Kano: Basic (must-be). Primary content delivery channel"
+"Interactive quizzes and assignments",Story,High,"moscow-should kano-performance","MoSCoW: Should have; Kano: Performance (one-dimensional). Better assessment → better learning outcomes"
+"Progress tracking dashboard",Story,High,"moscow-should kano-performance","MoSCoW: Should have; Kano: Performance (one-dimensional). Motivation and self-monitoring improve with richer tracking"
+"Peer-to-peer discussion forums",Story,Medium,"moscow-could kano-excitement","MoSCoW: Could have; Kano: Excitement (attractive). Community engagement delights learners but is not required"
+"Certificate generation",Story,Medium,"moscow-could kano-excitement","MoSCoW: Could have; Kano: Excitement (attractive). Rewarding for completers; can ship after assessments exist"
