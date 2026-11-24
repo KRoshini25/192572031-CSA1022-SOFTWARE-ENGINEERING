@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notes App</title>
+  <style>
+    body{font-family:Arial,sans-serif;max-width:680px;margin:50px auto;padding:0 18px;background:#f5f7fb;color:#222}
+    main{background:white;padding:28px;border-radius:12px;box-shadow:0 3px 14px #0001}
+    input{padding:11px;width:68%;max-width:400px}button{padding:11px 16px;cursor:pointer}
+    li{padding:8px 0;border-bottom:1px solid #eee}
+  </style>
+</head>
+<body><main>
+  <h1>Notes Application</h1>
+  <p>Add a note and view the saved notes.</p>
+  <form id="form"><input id="note" placeholder="Enter a note" required><button>Add Note</button></form>
+  <h2>My Notes</h2><ul id="notes"></ul>
+  <p id="message" aria-live="polite"></p>
+</main>
+<script>
+async function refresh(){
+  const response=await fetch('/notes'); const notes=await response.json();
+  document.getElementById('notes').innerHTML=notes.map(n=>`<li>${n.id}. ${escapeHtml(n.text)}</li>`).join('');
+}
+function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+document.getElementById('form').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const input=document.getElementById('note');
+  const response=await fetch('/notes',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({note:input.value})});
+  const result=await response.json();
+  document.getElementById('message').textContent=response.ok?'Note added successfully':result.error;
+  if(response.ok){input.value='';refresh();}
+});
+refresh();
+</script></body></html>
