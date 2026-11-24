@@ -1,0 +1,11 @@
+INPUT a, b
+x = a
+y = b
+WHILE b != 0
+    r = a MOD b
+    a = b
+    b = r
+END WHILE
+gcd = a
+lcm = (x * y) / gcd
+OUTPUT gcd, lcm

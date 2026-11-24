@@ -1,0 +1,7 @@
+Input: 48, 18
+GCD = 6
+LCM = 144
+
+Input: 12, 18
+GCD = 6
+LCM = 36
